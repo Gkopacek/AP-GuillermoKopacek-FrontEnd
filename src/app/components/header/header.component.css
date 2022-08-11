@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Nunito:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    /* height: 3.9rem; */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0.67) 100%);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.buttons a{
+    margin-left: 3.5px;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(242, 240, 250);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+}
+
+.buttons .LogIn__button {
+    color: black;
+    background-color: rgb(16, 228, 16);
+    border-radius: 30%;
+    width: 40px;
+    padding-left: 10px;
+}
+
+.buttons a:hover{
+    transform: scale(1.2);
+    color: #2112c6;
+    background-color: whitesmoke;
+    box-shadow: 2px 4px 5px rgba(70, 255, 255, .5);
+}
+
+.buttons{
+    margin-right: 14px;
+}
+
+.brand img{
+    width: 100px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: 65px;
+    grid-template-areas: 
+        "header"
+    ;
+}
+
+.header{
+    grid-area: header;
+    background-color: #85aedd;
+}
+
+/* Efecto movimiento en header */
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.info__parrafo{
+    color: antiquewhite;
+    text-align: center;
+}
+
+.background {
+    position: relative; 
+/*     width: 100vw; */
+    top: 0;
+    left: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0.67) 100%);
+    overflow:hidden;
+}
+
+.background span {
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 13vmin;
+    backface-visibility:visible;
+    position: absolute;
+    animation: move;
+    animation-duration: 12;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #2112c6;
+    top: 14%;
+    left: 16%;
+    animation-duration: 77s;
+    animation-delay: -87s;
+    transform-origin: -7vw 17vh;
+    box-shadow: -26vmin 0 3.7376357244110805vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #3c4c879d;
+    top: 44%;
+    left: 53%;
+    animation-duration: 377s;
+    animation-delay: -124s;
+    transform-origin: 12vw 15vh;
+    box-shadow: -26vmin 0 3.4971202960476973vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #0d66e3a4;
+    top: 46%;
+    left: 34%;
+    animation-duration: 217s;
+    animation-delay: -170s;
+    transform-origin: -19vw -10vh;
+    box-shadow: -26vmin 0 3.3952612216697626vmin currentColor;
+}
+
+.background span:nth-child(4) {
+    color: #2c3ad0c5;
+    top: 4%;
+    left: 10%;
+    animation-duration: 35s;
+    animation-delay: -151s;
+    transform-origin: -18vw -22vh;
+    box-shadow: -26vmin 0 4.217081767494994vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #232cde;
+    top: 97%;
+    left: 87%;
+    animation-duration: 377s;
+    animation-delay: -238s;
+    transform-origin: -13vw -10vh;
+    box-shadow: 26vmin 0 3.651093969499871vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #5a9de493;
+    top: 10%;
+    left: 2%;
+    animation-duration: 216s;
+    animation-delay: -309s;
+    transform-origin: 8vw -13vh;
+    box-shadow: -26vmin 0 4.244806695027888vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #10126eb5;
+    top: 85%;
+    left: 24%;
+    animation-duration: 139s;
+    animation-delay: -32s;
+    transform-origin: -17vw -14vh;
+    box-shadow: 26vmin 0 3.996474109233657vmin currentColor;
+}
+/* fin de efecto movimiento en header */
+
+@media (min-width: 600px){
+    .grid-container{
+        grid-template-rows: 45px;
+        grid-template-areas: 
+            "header"
+        ;
+    }
+
+    .info__img{
+        position: relative;
+        width: 13.0rem;
+        height: 13.0rem;
+        border-radius: 50%;
+        object-fit: cover;
+        bottom: 6rem ;
+    }
+
+    .brand img{
+        width: 100px;
+    }
+
+}
