@@ -10,12 +10,16 @@
     border-radius: 0.5%;
 }
 
-.grid-container{
+/* .grid-container{
     display: grid;
     grid-template-areas: 
     "baner"
-}
+} */
 
+figure{
+    padding: 0;
+    margin: 0;
+}
 /* Efecto movimiento en baner */
 
 @keyframes move {
@@ -24,10 +28,6 @@
     }
 }
 
-.info__parrafo{
-    color: antiquewhite;
-    text-align: center;
-}
 
 .background {
     position: relative; 
