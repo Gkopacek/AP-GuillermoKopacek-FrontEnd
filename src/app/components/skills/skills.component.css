@@ -1,0 +1,41 @@
+
+        /* progress */
+        progress{
+            height: 32px;
+            width: 100px;
+            
+        }
+        .progres{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: skyblue;
+            margin: auto;
+        }
+
+        .logos{
+            width: 25px;
+        }
+        
+        .center{
+            display: flex;
+            justify-content: center;
+        }
+
+        .radius{
+            border-radius: 50%;
+        }
+
+        @media (max-width: 760px) {
+                progress{
+                height: 20px;
+                width: 60px;
+                }
+                .logos{
+                    width: 12px;
+                }
+                .center{
+                display: flex;
+                align-items: flex-end;
+                
+            }
+            }

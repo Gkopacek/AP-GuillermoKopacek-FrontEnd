@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+/* import { NgCircleProgressModule } from 'ng-circle-progress'; */
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BanerComponent } from './components/baner/baner.component';
 import { InfoComponent } from './components/info/info.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,13 @@ import { EducacionComponent } from './components/educacion/educacion.component';
     BanerComponent,
     InfoComponent,
     ExperienciaComponent,
-    EducacionComponent
+    EducacionComponent,
+    SkillsComponent
   ],
   imports: [
-    BrowserModule
-  ],
+    BrowserModule,
+   /*  NgCircleProgressModule.forRoot({}) */
+          ],
   providers: [],
   bootstrap: [AppComponent]
 })
