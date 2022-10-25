@@ -22,7 +22,7 @@ header{
     /* position: fixed; */
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
     text-align: center;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .buttons a{
@@ -38,19 +38,32 @@ header{
     transition: all .4s ease-in-out;
 }
 
-.buttons .LogIn__button {
-    color: black;
-    background-color: rgb(16, 228, 16);
+.LogIn__button{
+    color: rgb(217, 220, 223);
+    background: rgba(2, 0, 36, 0);
     border-radius: 30%;
-    width: 40px;
-    padding-left: 10px;
+    border: rgba(2, 0, 36, 0);
+    width: 90px;
+    height: 40px;
+    margin-left: 15px;
+    transition: all .4s ease-in-out;
+    font-family: "Nunito";
+    font-weight: 600;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.buttons.LogIn__button:hover{
+    transform: scale(1.05);
+    color: rgba(9,9,121);
+    background-color: rgba(8, 151, 233, 0.497);
+    box-shadow: 2px 4px 5px rgba(255, 255, 255, 0.219);
 }
 
 .buttons a:hover{
     transform: scale(1.2);
     color: #2112c6;
     background-color: whitesmoke;
-    box-shadow: 2px 4px 5px rgba(70, 255, 255, .5);
+    box-shadow: 2px 4px 5px rgba(255, 255, 255, 0.5);
 }
 
 .buttons{
@@ -178,7 +191,7 @@ header{
 
 @media (min-width: 600px){
     .grid-container{
-        grid-template-rows: 45px;
+        grid-template-rows: 60px;
         grid-template-areas: 
             "header"
         ;

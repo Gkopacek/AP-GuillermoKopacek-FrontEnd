@@ -1,5 +1,4 @@
-
-    <section class="grid-container">
+<section class="grid-container">
         <header class="background header">
             <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             <a class="brand" href="#"><img src="./assets/APLogoRZ.png" alt="logo AP"></a>
@@ -9,7 +8,8 @@
                         <a href="#" class="fa fa-google-plus"></a>
                         <a href="#" class="fa fa-youtube"></a>
                         <a href="#" class="fa fa-linkedin"></a>
-                        <a href="/login" class="fa fa-sign-in buttons LogIn__button"></a>
+                        <button type="button" class="buttons LogIn__button" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+                        <button type="button" class="buttons LogIn__button" (click)="logOut()" *ngIf="isLogged">Salir</button>
                     </section>
         </header>
     </section>

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Nunito:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    /* height: 3.9rem; */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0.67) 100%);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.buttons a{
+    margin-left: 3.5px;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(242, 240, 250);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+}
+
+.LogIn__button{
+    color: black;
+    background-color: rgb(11, 74, 233);
+    border-radius: 30%;
+    width: 80px;
+    height: 40px;
+    margin-left: 3px;
+    padding-left: 10px;
+}
+
+.LogIn__button:hover{
+    transform: scale(1.2);
+    color: #2112c6;
+    background-color: rgb(237, 10, 10);
+    box-shadow: 2px 4px 5px rgba(70, 255, 255, .5);
+}
+
+.buttons a:hover{
+    transform: scale(1.2);
+    color: #2112c6;
+    background-color: whitesmoke;
+    box-shadow: 2px 4px 5px rgba(70, 255, 255, .5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px){
+    .grid-container{
+        grid-template-rows: 45px;
+        grid-template-areas: 
+            "header"
+        ;
+    }
+
+}
