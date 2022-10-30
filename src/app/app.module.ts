@@ -15,6 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { interceptorProvider } from './service/interceptor-service';
+import { NuevaExpComponent } from './components/experiencia/nueva-exp.component';
+import { EditarExpComponent } from './components/experiencia/editar-exp.component';
+import { EditarEduComponent } from './components/educacion/editar-edu.component';
+import { NuevaEduComponent } from './components/educacion/nueva-edu.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,11 @@ import { interceptorProvider } from './service/interceptor-service';
     HomeComponent,
     LoginComponent,
     PruebasComponent,
+    NuevaExpComponent,
+    EditarExpComponent,
+    EditarEduComponent,
+    NuevaEduComponent,
+
 
   ],
   imports: [

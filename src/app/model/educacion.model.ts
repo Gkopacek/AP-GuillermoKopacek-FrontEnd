@@ -1,13 +1,12 @@
 export class Educacion{
-    nombre_institucion: string;
-    carrera: string;
-    periodo: string;
-    img: string;
+    id?: number;
+    nombreEst: string;
+    descripcionEst: string;
+    urlImg: string;
     
-    constructor(nombre_institucion: string, carrera: string, periodo: string, img: string) {
-        this.nombre_institucion = nombre_institucion;
-        this.carrera = carrera;
-        this.periodo = periodo;
-        this.img = img;
+    constructor(nombreEst: string, descripcionEst: string, urlImg: string){
+        this.nombreEst = nombreEst;
+        this.descripcionEst = descripcionEst;
+        this.urlImg = urlImg;
     }
 }

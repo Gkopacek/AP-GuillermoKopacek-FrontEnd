@@ -1,0 +1,23 @@
+<div class="container" *ngIf="experiencia isLogged">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreE">Nombre de la empresa</label>
+                    <input type="text" class="form-control" name="nombreE" id="nombreE" [(ngModel)]="experiencia.nombreE" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionE">Descripcion de la tarea</label>
+                    <input type="text" class="form-control" name="descripcionE" id="descripcionE" [(ngModel)]="experiencia.descripcionE" required>
+                </div>
+                <div class="form-group">
+                    <label for="urlImg">Url de la imagen</label>
+                    <input type="text" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="experiencia.urlImg">
+                </div>
+                <button class="btn btn-primary">
+                    Editar experiencia
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

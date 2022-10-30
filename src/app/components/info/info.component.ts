@@ -17,7 +17,6 @@ export class InfoComponent implements OnInit {
       return this.persona = info
     } 
       );
-    console.log(this.persona)
   }
 
   

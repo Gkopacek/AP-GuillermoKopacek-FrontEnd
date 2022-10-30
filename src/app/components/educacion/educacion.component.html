@@ -1,16 +1,37 @@
-<div *ngFor="let educacion of educaciones ">
-    <div class="card">
-        <div class="row g-0">
-            <div class="col-3 col-md-4 d-flex" style=" background-color: rgb(29, 65, 136); justify-content: space-around">
-                <img src={{educacion.img}} class="img-fluid rounded-start" style="width:360px; height: 135px;" alt="...">
-              </div>
-          <div class="col-9 col-md-8 d-flex" style="background-color: pink ;">
-            <div class="card-body" style="background-color: rgb(139, 199, 243);" >
-              <h5 class="card-title" style="font-size: 13px;">{{educacion.nombre_institucion}}</h5>
-              <p class="card-text">{{educacion.carrera}}</p>
-              <p class="card-text"><small class="text-muted"></small>{{educacion.periodo}}</p>
+<div class="fondoExpe">
+  <button class="btn btn-primary d-block mx-auto" *ngIf="isLogged" [routerLink]="['/nuevaed']" routerLinkActive="router-link-active"  type="button">
+    Agregar Educacion
+</button>
+<div>
+  <div *ngIf="isLogged">
+
+</div>
+
+<div *ngFor="let edu of educacion ">
+  <div class="card">
+      <div class="row g-0">
+        <div class="col-3 col-md-4 d-flex" style=" background-color: rgb(29, 65, 136); justify-content: space-around">
+          <img src={{edu.urlImg}} class="img-fluid rounded-start" style="width:360px; height: 135px;" alt="...">
+        </div>
+        <div class="col-9 col-md-8 d-flex" style="background-color: pink ;">
+          <div class="card-body" style="background-color: rgb(139, 199, 243);" >
+            <h5 class="card-title" style="font-size: 13px;">{{edu.nombreEst}}</h5>
+            <p class="card-text">{{edu.descripcionEst}}</p>
+            <div class="botonera">
+              <button class="btn btn-primary" *ngIf="isLogged" routerLink="/editared/{{edu.id}}"  type="button">
+                <i class="bi bi-pencil"></i> Editar
+            </button>
+            <button class="btn btn-danger" *ngIf="isLogged" (click)="delete(edu.id)">
+                <i class="bi bi-trash3-fill"></i> Eliminar
+          </button>
             </div>
+
           </div>
         </div>
       </div>
+    </div>
 </div>
+</div>  
+
+</div>
+ 

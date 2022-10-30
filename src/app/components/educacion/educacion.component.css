@@ -1,8 +1,21 @@
-
 .card-text{
     font-size: 10px;
 }
 
 h5{
    font-size: 16px; 
+}
+
+.colorCard{
+    background-color: blueviolet;
+}
+
+.fondoExpe{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0.67) 100%);
+}
+
+.botonera{
+    display:flex;
+    justify-content:flex-end;
+    gap: 5px;
 }
