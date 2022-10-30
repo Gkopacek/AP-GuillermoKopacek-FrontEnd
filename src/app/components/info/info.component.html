@@ -1,10 +1,16 @@
+
 <article class="grid-container__main">
+    <div class="fondoBInfo">                                                           
+        <button class="btn btn-primary d-block mx-auto" *ngIf="isLogged" routerLink="/editar-info/{{persona.id}}" routerLinkActive="router-link-active"  type="button">
+            Modificar Datos
+        </button>
+    </div>
     <section class="info grid-container__bio">
         <figure class="grid__img">
             <img  src="./assets/img/WIN_20210723_18_45_47_Pro.jpg" alt="" class="info__img">
-            <p class="grid__parrafo-nombre p-centrado"> {{persona.nombre}} {{persona.apellido}} </p>
-            <p class="grid__parrafo-titulo p-centrado">JR Full Stack</p>
+            <p class="grid__parrafo-nombre p-centrado"> {{persona.nombre}} {{persona.apellido}}</p>
+            <p class="grid__parrafo-titulo p-centrado">{{persona.categoria}}</p>
         </figure>
-        <p class="grid__parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro modi est et voluptate vel aliquid similique provident rerum voluptatem.</p>
+        <p class="grid__parrafo">{{persona.bio}}</p>
     </section>
 </article>

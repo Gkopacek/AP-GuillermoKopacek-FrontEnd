@@ -37,7 +37,6 @@ export class EducacionComponent implements OnInit {
   }
 
   delete(id?: number){
-    alert(id);
     if(id != null){
       this.eduService.delete(id).subscribe(
         data => {

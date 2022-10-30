@@ -34,14 +34,12 @@ export class ExperienciaComponent implements OnInit {
   cargarExpLab():void{
     this.experService.lista().subscribe(
       data => {this.experiencia = data
-        console.log(data);
       }
       
     )
   }
 
   delete(id?: number){
-    alert(id);
     if(id){
       this.experService.delete(id).subscribe(
         data => {

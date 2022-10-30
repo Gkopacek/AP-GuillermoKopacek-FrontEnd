@@ -16,18 +16,18 @@ export class EditarExpComponent implements OnInit {
     const i = this.activatedR.snapshot.params['id'];
     this.expS.detail(i).subscribe(data =>{
       this.experiencia = data
-      console.log(data);
     }, err => {
-      alert("no se pudo obtener info de la base de datos")
+      alert("algo salio mal")
     })
   }
 
   onUpdate(){
     const id = this.activatedR.snapshot.params['id'];
     this.expS.update(id, this.experiencia).subscribe(data =>{
+      alert("Experiencia modificada");
       this.router.navigate([''])
     }, err =>{
-      alert("algo salio mal")
+      alert("algo salio mal con la modificacion")
       this.router.navigate([''])
     })
   }

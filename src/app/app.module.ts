@@ -19,6 +19,7 @@ import { NuevaExpComponent } from './components/experiencia/nueva-exp.component'
 import { EditarExpComponent } from './components/experiencia/editar-exp.component';
 import { EditarEduComponent } from './components/educacion/editar-edu.component';
 import { NuevaEduComponent } from './components/educacion/nueva-edu.component';
+import { EditarInfoComponent } from './components/info/editar-info.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NuevaEduComponent } from './components/educacion/nueva-edu.component';
     EditarExpComponent,
     EditarEduComponent,
     NuevaEduComponent,
+    EditarInfoComponent,
 
 
   ],
