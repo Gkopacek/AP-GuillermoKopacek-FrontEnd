@@ -1,0 +1,9 @@
+.row{
+    background-color: skyblue;
+}
+footer{
+    display:flex;
+    flex-direction: column;
+    color: aliceblue;
+    text-align: center;
+}

@@ -20,6 +20,7 @@ import { EditarExpComponent } from './components/experiencia/editar-exp.componen
 import { EditarEduComponent } from './components/educacion/editar-edu.component';
 import { NuevaEduComponent } from './components/educacion/nueva-edu.component';
 import { EditarInfoComponent } from './components/info/editar-info.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { EditarInfoComponent } from './components/info/editar-info.component';
     EditarEduComponent,
     NuevaEduComponent,
     EditarInfoComponent,
+    FooterComponent,
 
 
   ],

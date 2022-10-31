@@ -8,28 +8,28 @@ import { Educacion } from '../model/educacion.model';
   providedIn: 'root'
 })
 export class EducacionService {
-  educaionURL: string = "http://localhost:8080/estudios/" 
-
+  /*educaionURL: string = "http://localhost:8080/estudios/"*/ 
+  educacionURL: string = 'https://backendkopacekp.herokuapp.com/estudios/'
   constructor(private http:HttpClient) { }
   
   public lista():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(this.educaionURL + 'lista');
+    return this.http.get<Educacion[]>(this.educacionURL + 'lista');
   }
 
   public detail(id: number): Observable<Educacion>{
-    return this.http.get<Educacion>(this.educaionURL + `detail/${id}`);
+    return this.http.get<Educacion>(this.educacionURL + `detail/${id}`);
   }
 
   public save(educaion: Educacion): Observable<any>{
-    return this.http.post<any>(this.educaionURL + 'crear', educaion );
+    return this.http.post<any>(this.educacionURL + 'crear', educaion );
   }
 
   public update(id: number, educacion: Educacion): Observable<any>{
-    return this.http.put<any>(this.educaionURL + `modificar/${id}`, educacion);
+    return this.http.put<any>(this.educacionURL + `modificar/${id}`, educacion);
   }
 
 public delete(id: number):Observable<any>{
-  return this.http.delete<any>(this.educaionURL + `borrar/${id}`);
+  return this.http.delete<any>(this.educacionURL + `borrar/${id}`);
 }
 
 
