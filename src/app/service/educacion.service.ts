@@ -8,8 +8,8 @@ import { Educacion } from '../model/educacion.model';
   providedIn: 'root'
 })
 export class EducacionService {
-  /*educaionURL: string = "http://localhost:8080/estudios/"*/ 
-  educacionURL: string = 'https://backendkopacekp.herokuapp.com/estudios/'
+  educacionURL: string = "http://localhost:8080/estudios/" 
+  /*educacionURL: string = 'https://backendapgk2022.herokuapp.com/estudios/'*/
   constructor(private http:HttpClient) { }
   
   public lista():Observable<Educacion[]>{

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion.model';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { ImagenesService } from 'src/app/service/imagenes.service';
 
 @Component({
   selector: 'app-editar-edu',
@@ -10,7 +11,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
 })
 export class EditarEduComponent implements OnInit {
 
-  constructor(private edS: EducacionService, private acivatedR: ActivatedRoute, private router:Router) { }
+  constructor(private edS: EducacionService, private acivatedR: ActivatedRoute, private router:Router, public Simagen: ImagenesService) { }
   edu:Educacion = null;
   ngOnInit(): void {
     const i = this.acivatedR.snapshot.params['id'];
@@ -30,6 +31,12 @@ export class EditarEduComponent implements OnInit {
       alert("algo salio mal")
       this.router.navigate([''])
     })
+  }
+
+  UploadImagenEdu($event:any){
+    this.Simagen.uploadImagen($event)
+    console.log($event)
+
   }
 }
 

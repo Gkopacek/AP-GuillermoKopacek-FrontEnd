@@ -21,6 +21,13 @@ import { EditarEduComponent } from './components/educacion/editar-edu.component'
 import { NuevaEduComponent } from './components/educacion/nueva-edu.component';
 import { EditarInfoComponent } from './components/info/editar-info.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NuevaSkillComponent } from './components/skills/nueva-skill.component';
+import { EditarSkillComponent } from './components/skills/editar-skill.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +47,10 @@ import { FooterComponent } from './components/footer/footer.component';
     NuevaEduComponent,
     EditarInfoComponent,
     FooterComponent,
+    NuevaSkillComponent,
+    EditarSkillComponent,
+
+
 
 
   ],
@@ -47,7 +58,10 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgCircleProgressModule.forRoot({}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

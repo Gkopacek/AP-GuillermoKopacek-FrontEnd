@@ -1,26 +1,37 @@
-<div class="progres">
-    <div class="center">
-        <label for="HTML"><img src="https://w7.pngwing.com/pngs/390/229/png-transparent-logo-html5-brand-design-text-logo-number.png" alt=""  class="logos"></label>
-    <progress id="HTML" max="100" value="70"></progress>
+<div class="container-fluid">
+    <button class="btn btn-primary d-block mx-auto" *ngIf="isLogged" routerLink='/nuevaSkill' routerLinkActive="router-link-active"  type="button">
+        Agregar Skill
+    </button>
+    <div class="row d-flex justify-content-center">
+        <div class="col text-center" *ngFor="let skill of hys">
+            <circle-progress
+            [percent]="(skill.porcentaje)"
+            [title]="(skill.nombre)"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [titleColor]="'white'"
+            [backgroundColor]="'#026af2'"
+            [backgroundGradientStopColor]="'#ffffff'"
+            [backgroundPadding]="-10" 
+            [radius]="50"
+            [maxPercent]="100" 
+            [outerStrokeWidth]="7"
+            [outerStrokeColor]="'#290bc1'"
+            [innerStrokeWidth]="10"
+            [subtitleColor]="'#444444'"
+            [showInnerStroke]="false" 
+            [startFromZero]="false" 
+    ></circle-progress>
+    <div>
+        <button class="btn btn-primary p-1 m-2" routerLink="editaSkill/{{skill.id}}" *ngIf="isLogged"   type="button">
+            <i class="bi bi-pencil"></i> Editar
+        </button>
+        <button class="btn btn-danger p-1 m-2" *ngIf="isLogged" (click)="delete(skill.id)" type="button">
+            <i class="bi bi-trash3-fill"></i> Eliminar
+      </button>
+    </div>    
     </div>
-    <div class="center">
-        <label for="CSS"><img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="" class="logos"></label>
-    <progress id="CSS" max="100" value="60"></progress>
-    </div>
-    <div class="center">
-        <label for="Javascript"><img src="http://www.cantabriatic.com/wp-content/uploads/2015/11/javascript-shield-logo.png" alt="" class="logos"></label>
-        <progress id="Javascript" max="100" value="30"></progress>
-    </div>
-    <div class="center">
-        <label for="GuitHub"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" class="logos"></label>
-    <progress id="GuitHub" max="100" value="50"></progress>
-    </div>
-    <div class="center">
-        <label for="ingles"><img src="https://icon-library.com/images/people-talking-icon-png/people-talking-icon-png-10.jpg" alt="" class="logos"></label>
-    <progress id="ingles" max="100" value="40"></progress>
-    </div>
-    <div class="center">
-        <label for="TrabajoEnEquipo"><img src="https://www.pngitem.com/pimgs/m/449-4491044_team-work-coloring-page-world-team-icon-png.png" alt="" class="logos radius"></label>
-    <progress id="TrabajoEnEquipo" max="100" value="85"></progress>
+
+        
     </div>
 </div>
