@@ -37,9 +37,9 @@ export class EditarInfoComponent implements OnInit {
   }
 
   uploadImagenBio($event: any){
-    /*const id = this.aRoute.snapshot.params['id'];
-    const name = "bio_"+id;*/
-    this.imagen.uploadImagen($event/*, name*/)
+    const id = this.aRoute.snapshot.params['id'];
+    const name = "bio_"+id;
+    this.imagen.uploadImagen($event, name)
   }
 
 } 

@@ -25,19 +25,22 @@ export class EditarEduComponent implements OnInit {
 
   onUpdate(){
     const id = this.acivatedR.snapshot.params['id'];
+    this.edu.urlImg = this.Simagen.url
+    this.Simagen.url = null
     this.edS.update(id, this.edu).subscribe(data =>{
       this.router.navigate([''])
     }, err =>{
-      alert("algo salio mal")
+      alert("no se pudo actualizar la educacion")
       this.router.navigate([''])
     })
   }
 
   UploadImagenEdu($event:any){
-    this.Simagen.uploadImagen($event)
+    const id = this.acivatedR.snapshot.params['id'];
+    const name = "imgEdu_"+ id
+    this.Simagen.uploadImagen($event, name)
     console.log($event)
-
-  }
+}
 }
 
 

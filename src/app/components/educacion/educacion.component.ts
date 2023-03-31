@@ -7,6 +7,7 @@ import { TokenService } from 'src/app/service/token.service';
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
+
 export class EducacionComponent implements OnInit {
   educacion:Educacion[] = []
   
@@ -22,6 +23,7 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.cargarEdu()
     if(this.tokenS.getToken()){
+      console.log(this.tokenS.getToken())
       this.isLogged = true;
   }else{
     this.isLogged = false;

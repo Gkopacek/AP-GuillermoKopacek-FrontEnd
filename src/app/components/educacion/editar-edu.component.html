@@ -12,11 +12,20 @@
                 </div>
                 <div class="form-group">
                     <label for="urlImg">imagen</label>
-                    <input type="file" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="edu.urlImg">
+                    <input type="file" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="edu.urlImg" (change)="UploadImagenEdu($event)">
                 </div>
-                <button class="btn btn-primary">
-                    Guardar
-                </button>
+                <ng-template [ngIf]=Simagen.url [ngIfElse]="imgNocargada">
+                    <figure class="imgBio"><img [src]=Simagen.url alt="" width="150px"></figure>
+                    <button class="btn btn-primary">
+                        Guardar
+                    </button>
+                </ng-template>
+                
+                <ng-template #imgNocargada>
+                    <button class="btn btn-primary " disabled="disabled">
+                        Guardar
+                    </button>
+                </ng-template>
             </form>
         </div>
     </div>

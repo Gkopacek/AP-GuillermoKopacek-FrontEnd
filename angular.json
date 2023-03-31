@@ -104,5 +104,8 @@
       }
     }
   },
-  "defaultProject": "AP-GuillermoKopacek-FrontEnd"
+  "defaultProject": "AP-GuillermoKopacek-FrontEnd",
+  "cli": {
+    "analytics": "3944496e-4048-4bfb-b19e-db8691f05bf6"
+  }
 }

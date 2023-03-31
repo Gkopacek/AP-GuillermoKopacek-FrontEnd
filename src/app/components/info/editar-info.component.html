@@ -24,16 +24,17 @@
                 </div>
                 <ng-template [ngIf]=imagen.url [ngIfElse]="imgNocargada">
                     <figure class="imgBio"><img [src]=imagen.url alt="" width="150px"></figure>
-                      <button class="btn btn-primary">
-                          Guardar
-                      </button>
-                  </ng-template>
-                  <ng-template #imgNocargada>
-                      <button class="btn btn-primary " disabled="disabled">
-                          Guardar
-                      </button>
-                    </ng-template>
-              </form>  
+                    <button class="btn btn-primary">
+                        Guardar
+                    </button>
+                </ng-template>
+                
+                <ng-template #imgNocargada>
+                    <button class="btn btn-primary " disabled="disabled">
+                        Guardar
+                    </button>
+                </ng-template>
+            </form>  
         </div>
     </div>
 </div>

@@ -27,6 +27,8 @@ import { EditarSkillComponent } from './components/skills/editar-skill.component
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { NuevoProyectoComponent } from './components/nuevo-proyecto/nuevo-proyecto.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     FooterComponent,
     NuevaSkillComponent,
     EditarSkillComponent,
+    ProyectosComponent,
+    NuevoProyectoComponent,
 
 
 
