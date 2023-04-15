@@ -35,7 +35,7 @@ export class SkillsComponent implements OnInit {
     })
   }
 
-  delete(id: number){
+  delete(id: Number){
     if(id){
       this.HySService.delete(id).subscribe(
         data => {

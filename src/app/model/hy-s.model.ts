@@ -1,5 +1,5 @@
 export class HyS {
-    id: number;
+    id?: number;
     nombre: string;
     porcentaje: number;
     img: string;

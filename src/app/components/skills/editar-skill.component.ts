@@ -24,8 +24,10 @@ export class EditarSkillComponent implements OnInit {
 
   onUpdate(){
     const id = this.acivatedR.snapshot.params['id'];
+    console.log(this.hys)
     this.HySS.update(id, this.hys).subscribe(data =>{
       this.router.navigate([''])
+      console.log(data)
       alert(data.mensaje.error)
     }, err =>{
       alert(err.error.mensaje)

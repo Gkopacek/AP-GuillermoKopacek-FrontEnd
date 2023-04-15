@@ -16,7 +16,7 @@ export class HySService {
     return this.http.get<HyS[]>(this.HySURL + 'lista');
   }
 
-  public detail(id: number): Observable<HyS>{
+  public detail(id: Number): Observable<HyS>{
     return this.http.get<HyS>(this.HySURL + `detail/${id}`)
   }
 
@@ -24,11 +24,11 @@ export class HySService {
     return this.http.post<any>(this.HySURL + 'crear', hys)
   }
 
-  public update(id: number, hys: HyS): Observable<any>{
+  public update(id: Number, hys: HyS): Observable<any>{
     return this.http.put<any>(this.HySURL + `modificar/${id}`, hys)
   }
 
-  public delete(id: number): Observable<any>{
+  public delete(id: Number): Observable<any>{
     return this.http.delete<any>(this.HySURL + `borrar/${id}`);
   }
 }
