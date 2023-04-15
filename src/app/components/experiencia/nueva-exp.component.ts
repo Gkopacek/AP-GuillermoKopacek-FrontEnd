@@ -22,11 +22,10 @@ ngOnInit(): void {
     const expe = new Experiencia(this.nombreE, this.descripcionE, this.urlImg);
     this.expS.save(expe).subscribe(
       data=>{
-        alert("Experiencia añadida");
+        alert(data.mensaje);
         this.router.navigate(['']);
       }, err =>{
-        alert("Fallo")
-        this.router.navigate(['']);
+        alert(err.error.mensaje)
       }
       )
   }

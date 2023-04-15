@@ -17,7 +17,7 @@ export class EditarExpComponent implements OnInit {
     this.expS.detail(i).subscribe(data =>{
       this.experiencia = data
     }, err => {
-      alert("algo salio mal")
+      alert(err.error.mensaje)
     })
   }
 
@@ -27,7 +27,7 @@ export class EditarExpComponent implements OnInit {
       alert("Experiencia modificada");
       this.router.navigate([''])
     }, err =>{
-      alert("algo salio mal con la modificacion")
+      alert(err.error.mensaje)
       this.router.navigate([''])
     })
   }

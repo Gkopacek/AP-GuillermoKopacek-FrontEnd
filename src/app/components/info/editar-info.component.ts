@@ -29,10 +29,11 @@ export class EditarInfoComponent implements OnInit {
     this.persona.img = this.imagen.url;
     this.imagen.url = null;
     this.pService.update(id, this.persona).subscribe(data =>{
+      alert(data.mensaje)
       this.router.navigate([''])
     }, err =>{
-      alert("algo salio mal")
-      this.router.navigate([''])
+      alert(err.error)
+     /*  this.router.navigate(['']) */
     })
   }
 

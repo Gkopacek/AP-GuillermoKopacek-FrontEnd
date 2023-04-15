@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -28,7 +27,9 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import { NuevoProyectoComponent } from './components/nuevo-proyecto/nuevo-proyecto.component';
+import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
+import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
+
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { NuevoProyectoComponent } from './components/nuevo-proyecto/nuevo-proyec
     NuevaSkillComponent,
     EditarSkillComponent,
     ProyectosComponent,
-    NuevoProyectoComponent,
+   NuevoProyectoComponent,
+   EditarProyectoComponent,
 
 
 

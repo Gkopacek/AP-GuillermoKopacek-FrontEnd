@@ -23,11 +23,11 @@ export class NuevaEduComponent implements OnInit {
     const edu = new Educacion(this.nombreEd, this.descripcionEd, this.urlImg);
     this.eduS.save(edu).subscribe(
       data=>{
-        alert("Experiencia añadida");
+        alert(data.mensaje);
         this.router.navigate(['']);
       }, err =>{
-        alert("Fallo")
-        this.router.navigate(['']);
+        alert(err.error.mensaje)
+        /* this.router.navigate(['']); */
       }
       )
   }

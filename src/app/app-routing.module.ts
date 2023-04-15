@@ -9,7 +9,7 @@ import { NuevaEduComponent } from './components/educacion/nueva-edu.component';
 import { EditarInfoComponent } from './components/info/editar-info.component';
 import { NuevaSkillComponent } from './components/skills/nueva-skill.component';
 import { EditarSkillComponent } from './components/skills/editar-skill.component';
-import { NuevoProyectoComponent } from './components/nuevo-proyecto/nuevo-proyecto.component';
+import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},

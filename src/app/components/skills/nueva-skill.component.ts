@@ -24,10 +24,11 @@ export class NuevaSkillComponent implements OnInit {
     const hys = new HyS(this.nombre, this.porcentaje, this.img);
     this.HySS.save(hys).subscribe(
       data=>{
-        alert("Skill añadida");
+        console.log(data.mensaje)
+        alert(data.mensaje);
         this.router.navigate(['']);
       }, err =>{
-        alert("Fallo")
+        alert(err.error.mensaje)
         this.router.navigate(['']);
       }
       )

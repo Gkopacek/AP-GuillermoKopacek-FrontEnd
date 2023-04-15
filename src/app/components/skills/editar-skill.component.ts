@@ -17,9 +17,8 @@ export class EditarSkillComponent implements OnInit {
     const i = this.acivatedR.snapshot.params['id'];
     this.HySS.detail(i).subscribe(data =>{
       this.hys = data
-      console.log(data);
     }, err => {
-      alert("no se pudo obtener info de la base de datos")
+      alert(err.error.mensaje)
     })
   }
 
@@ -27,9 +26,10 @@ export class EditarSkillComponent implements OnInit {
     const id = this.acivatedR.snapshot.params['id'];
     this.HySS.update(id, this.hys).subscribe(data =>{
       this.router.navigate([''])
+      alert(data.mensaje.error)
     }, err =>{
-      alert("algo salio mal")
-      this.router.navigate([''])
+      alert(err.error.mensaje)
+      /* this.router.navigate(['']) */
     })
   }
 }
