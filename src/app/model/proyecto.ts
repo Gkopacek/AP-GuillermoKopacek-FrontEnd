@@ -1,4 +1,5 @@
 export class Proyecto {
+id?: number;
 nombreProyect: string
 descripcionProyect: string
 imgProyect: string

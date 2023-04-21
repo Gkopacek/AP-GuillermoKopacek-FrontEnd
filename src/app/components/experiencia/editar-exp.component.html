@@ -1,23 +1,37 @@
-<div class="container" *ngIf="experiencia isLogged">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreE">Nombre de la empresa</label>
-                    <input type="text" class="form-control" name="nombreE" id="nombreE" [(ngModel)]="experiencia.nombreE" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcionE">Descripcion de la tarea</label>
-                    <input type="text" class="form-control" name="descripcionE" id="descripcionE" [(ngModel)]="experiencia.descripcionE" required>
-                </div>
-                <div class="form-group">
-                    <label for="urlImg">Url de la imagen</label>
-                    <input type="text" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="experiencia.urlImg">
-                </div>
-                <button class="btn btn-primary">
-                    Guardar
+<main class="d-flex align-items-center">
+    <div class="container" *ngIf="experiencia isLogged">
+        <div class="row">
+            <div>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombreE">Nombre de la empresa</label>
+                        <input type="text" class="form-control" name="nombreE" id="nombreE" [(ngModel)]="experiencia.nombreE" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionE">Descripcion de la tarea</label>
+                        <input type="text" class="form-control" name="descripcionE" id="descripcionE" [(ngModel)]="experiencia.descripcionE" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">imagen</label>
+                        <input type="file" class="form-control" name="img" id="img" [(ngModel)]="experiencia.urlImg" (change)="uploadImagenExpe($event)">
+                    </div>
+                    <ng-template [ngIf]="imagen.url" [ngIfElse]="imgNocargada">
+                        <figure class="imgBio"><img [src]="imagen.url" alt="" width="150px"></figure>
+                        <button class="btn btn-primary">
+                            Guardar
+                        </button>
+                    </ng-template>
+                    
+                    <ng-template #imgNocargada>
+                        <button class="btn btn-primary " disabled="disabled">
+                            Guardar
+                        </button>
+                    </ng-template>
+                </form>
+                <button (click)="cancell()" class="btn btn-danger">
+                    Cancelar
                 </button>
-            </form>
+            </div>
         </div>
     </div>
-</div>
+</main>

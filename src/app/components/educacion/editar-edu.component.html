@@ -1,32 +1,37 @@
-<div class="container" *ngIf="edu isLogged">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreEst">Nombre de la institución</label>
-                    <input type="text" class="form-control" name="nombreEst" id="nombreEst" [(ngModel)]="edu.nombreEst" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcionEst">estudios</label>
-                    <input type="text" class="form-control" name="descripcionEst" id="descripcionEst" [(ngModel)]="edu.descripcionEst" required>
-                </div>
-                <div class="form-group">
-                    <label for="urlImg">imagen</label>
-                    <input type="file" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="edu.urlImg" (change)="UploadImagenEdu($event)">
-                </div>
-                <ng-template [ngIf]=Simagen.url [ngIfElse]="imgNocargada">
-                    <figure class="imgBio"><img [src]=Simagen.url alt="" width="150px"></figure>
-                    <button class="btn btn-primary">
-                        Guardar
-                    </button>
-                </ng-template>
-                
-                <ng-template #imgNocargada>
-                    <button class="btn btn-primary " disabled="disabled">
-                        Guardar
-                    </button>
-                </ng-template>
-            </form>
+<main class="d-flex align-items-center">
+    <div class="container" *ngIf="edu isLogged">
+        <div class="row">
+            <div>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombreEst">Nombre de la institución</label>
+                        <input type="text" class="form-control" name="nombreEst" id="nombreEst" [(ngModel)]="edu.nombreEst" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionEst">estudios</label>
+                        <input type="text" class="form-control" name="descripcionEst" id="descripcionEst" [(ngModel)]="edu.descripcionEst" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="urlImg">imagen</label>
+                        <input type="file" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="edu.urlImg" (change)="UploadImagenEdu($event)">
+                    </div>
+                    <ng-template [ngIf]=Simagen.url [ngIfElse]="imgNocargada">
+                        <figure class="imgBio"><img [src]=Simagen.url alt="" width="150px"></figure>
+                        <button class="btn btn-primary">
+                            Guardar
+                        </button>
+                    </ng-template>
+                    
+                    <ng-template #imgNocargada>
+                        <button class="btn btn-primary " disabled="disabled">
+                            Guardar
+                        </button>
+                    </ng-template>
+                </form>
+                <button (click)="cancell()" class="btn btn-danger">
+                    Cancelar
+                </button>
+            </div>
         </div>
     </div>
-</div>
+</main>

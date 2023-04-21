@@ -32,4 +32,8 @@ export class NuevaEduComponent implements OnInit {
       )
   }
 
+  cancell(){
+    this.router.navigate([''])
+  }
+
 }

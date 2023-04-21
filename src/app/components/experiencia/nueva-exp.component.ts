@@ -29,4 +29,9 @@ ngOnInit(): void {
       }
       )
   }
+
+  cancell(){
+    this.router.navigate([''])
+  }
+
 }

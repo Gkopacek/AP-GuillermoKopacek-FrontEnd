@@ -1,23 +1,28 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombrePr">Nombre del proyecto</label>
-                    <input type="text" class="form-control" name="nombrePr" id="nombrePr" [(ngModel)]="nombrePr" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcionPr">Descripcion del proyecto</label>
-                    <input type="text" class="form-control" name="descripcionPr" id="descripcionPr" [(ngModel)]="descripcionPr" required>
-                </div>
-                <div class="form-group">
-                    <label for="urlImg">Url de la imagen</label>
-                    <input type="type" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="urlImg">
-                </div>
-                <button class="btn btn-primary">
-                    Guardar Proyecto
+<main class="d-flex align-items-center" >
+    <div class="container">
+        <div class="row">
+            <div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombrePr">Nombre del proyecto</label>
+                        <input type="text" class="form-control" name="nombrePr" id="nombrePr" [(ngModel)]="nombrePr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionPr">Descripcion del proyecto</label>
+                        <input type="text" class="form-control" name="descripcionPr" id="descripcionPr" [(ngModel)]="descripcionPr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="urlImg">Url de la imagen</label>
+                        <input type="type" class="form-control" name="urlImg" id="urlImg" [(ngModel)]="urlImg">
+                    </div>
+                    <button class="btn btn-primary">
+                        Guardar Proyecto
+                    </button>
+                </form>
+                <button (click)="cancell()" class="btn btn-danger">
+                    Cancelar
                 </button>
-            </form>
+            </div>
         </div>
     </div>
-</div>
+</main>

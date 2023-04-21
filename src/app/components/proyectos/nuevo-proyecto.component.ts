@@ -30,4 +30,8 @@ export class NuevoProyectoComponent {
     )
   }
 
+  cancell(){
+    this.router.navigate([''])
+  }
+
 }

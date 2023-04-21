@@ -43,6 +43,10 @@ export class EditarInfoComponent implements OnInit {
     this.imagen.uploadImagen($event, name)
   }
 
+  cancell(){
+    this.router.navigate([''])
+  }
+
 } 
   
 

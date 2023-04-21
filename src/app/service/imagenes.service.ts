@@ -14,18 +14,19 @@ public uploadImagen($event:any, name: string){
   const file = $event.target.files[0];
   const imgRef = ref(this.storage, `imagenes/`+ name );
   uploadBytes(imgRef, file)
-  .then(response => {this.getImagen()})
+  .then(response => {this.getImagen(name)})
   .catch(error => console.log(error))
 }
 
-public getImagen(){
+public getImagen(name: string){
   const imagesRef = ref(this.storage, 'imagenes')
   list(imagesRef)
   .then(async response => {
-    console.log(response.items)
     for(let item of response.items){
       console.log(item.name)
-      this.url =await getDownloadURL(item);
+      if(item.name == name){
+        this.url =await getDownloadURL(item);
+      }
       
     }
   })

@@ -31,5 +31,24 @@ export class ProyectosComponent implements OnInit {
       
     )
   }
+
+  delete(id?: number){
+    if(id){
+      this.proyectService.delete(id).subscribe(
+        data => {
+          alert(data.mensaje)
+          this.cargarProyectos();
+        }, err => {
+          alert(err.error.mensaje)
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
+  }
+
 }
+
+
+
+
 

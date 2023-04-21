@@ -41,6 +41,13 @@ export class EditarEduComponent implements OnInit {
     this.Simagen.uploadImagen($event, name)
     console.log($event)
 }
+
+cancell(){
+  this.router.navigate([''])
+}
+
+
+
 }
 
 
